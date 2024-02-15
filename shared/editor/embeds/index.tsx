@@ -599,8 +599,7 @@ new EmbedDescriptor({
   transformMatch: (matches: RegExpMatchArray) => matches[0],
   icon: <Img src="https://commun.athos-sol.com/core/img/favicon.ico" alt="Fichiers commun" />, // Remplacez par le chemin d'accès à l'icône approprié
   visible: true, // Définissez la visibilité selon les besoins
-});
-
+}),
 // Ajout de Baserow
 new EmbedDescriptor({
   title: "Baserow",
@@ -609,7 +608,7 @@ new EmbedDescriptor({
   transformMatch: (matches: RegExpMatchArray) => matches[0],
   icon: <Img src="https://baserow.io/img/favicon_16.png" alt="Baserow" />, // Remplacez par le chemin d'accès à l'icône approprié
   visible: true, // Définissez la visibilité selon les besoins
-});
+}),
   new EmbedDescriptor({
     title: "YouTube",
     keywords: "google video",
