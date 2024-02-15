@@ -87,7 +87,7 @@ export class EmbedDescriptor {
     this.regexMatch = options.regexMatch;
     this.transformMatch = options.transformMatch;
     this.attrs = options.attrs;
-    this.visible = options.visible;
+    this.visible = options.visible?? false;
     this.component = options.component;
   }
 
@@ -591,6 +591,25 @@ const embeds: EmbedDescriptor[] = [
       `https://whimsical.com/embed/${matches[1]}`,
     icon: <Img src="/images/whimsical.png" alt="Whimsical" />,
   }),
+// Ajout de Fichiers commun
+new EmbedDescriptor({
+  title: "Fichiers commun",
+  keywords: "fichiers, commun", // Ajoutez des mots-clés pertinents ici
+  regexMatch: [new RegExp("^https://commun\\.athos-sol\\.com/.*$")],
+  transformMatch: (matches: RegExpMatchArray) => matches[0],
+  icon: <Img src="https://commun.athos-sol.com/core/img/favicon.ico" alt="Fichiers commun" />, // Remplacez par le chemin d'accès à l'icône approprié
+  visible: true, // Définissez la visibilité selon les besoins
+});
+
+// Ajout de Baserow
+new EmbedDescriptor({
+  title: "Baserow",
+  keywords: "baserow, database", // Ajoutez des mots-clés pertinents ici
+  regexMatch: [new RegExp("^https://banana\\.monodon\\.eu/.*$")],
+  transformMatch: (matches: RegExpMatchArray) => matches[0],
+  icon: <Img src="https://baserow.io/img/favicon_16.png" alt="Baserow" />, // Remplacez par le chemin d'accès à l'icône approprié
+  visible: true, // Définissez la visibilité selon les besoins
+});
   new EmbedDescriptor({
     title: "YouTube",
     keywords: "google video",
